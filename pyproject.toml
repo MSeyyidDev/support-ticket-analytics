@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "support-ticket-analytics"
+version = "0.1.0"
+description = "Operational analytics dashboard for IT-support ticket data."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Seyyid Sahin", email = "seyyidsahin2834@gmail.com" }]
+requires-python = ">=3.13"
+dependencies = [
+    "streamlit>=1.40",
+    "pandas>=2.2",
+    "plotly>=5.24",
+    "Faker>=33.1",
+    "SQLAlchemy>=2.0",
+    "numpy>=2.1",
+    "pyarrow>=18.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3"]
+
+[tool.setuptools.packages.find]
+include = ["data*", "analytics*", "dashboard*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -q"
