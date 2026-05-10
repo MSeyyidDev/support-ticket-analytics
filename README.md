@@ -1,5 +1,9 @@
 # Support Ticket Analytics
 
+[![CI](https://github.com/MSeyyidDev/support-ticket-analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/MSeyyidDev/support-ticket-analytics/actions/workflows/ci.yml)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A polished Streamlit dashboard that turns raw IT-support ticket data into
 operational insights. It ships with a self-contained synthetic dataset
 (150 users, 5,000 tickets, 25,000 comments across 18 months) so you can
