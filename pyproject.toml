@@ -9,7 +9,7 @@ description = "Operational analytics dashboard for IT-support ticket data."
 readme = "README.md"
 license = { file = "LICENSE" }
 authors = [{ name = "Seyyid Sahin", email = "seyyidsahin2834@gmail.com" }]
-requires-python = ">=3.13"
+requires-python = ">=3.11"
 dependencies = [
     "streamlit>=1.40",
     "pandas>=2.2",

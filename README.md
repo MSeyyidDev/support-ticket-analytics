@@ -13,6 +13,10 @@ The data layer is **schema-compatible with a typical `ticket-system-api`
 backend**, so the synthetic loader can later be swapped for an HTTP client
 without touching the analytics or dashboard code.
 
+**Demo-ready:** deploy this repository on Streamlit Community Cloud with
+`dashboard/app.py` as the entry point. If `data/tickets.sqlite` is missing, the
+app now generates the synthetic demo dataset automatically on first start.
+
 ---
 
 ## Why this exists
@@ -137,7 +141,7 @@ Derived columns added at load time: `resolution_hours`,
 
 ## Setup
 
-Requires Python **3.13** and a POSIX-ish shell (or `make` on Windows via MSYS).
+Requires Python **3.11+** and a POSIX-ish shell (or `make` on Windows via MSYS).
 
 ```bash
 make install        # creates .venv and installs pinned requirements

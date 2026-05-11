@@ -9,6 +9,7 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
+from data.generator import TicketDataGenerator
 from data.loader import TicketDataLoader, TicketDataset
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -16,6 +17,9 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 @st.cache_data(show_spinner="Loading ticket dataset ...")
 def _load_dataset() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    data_dir = PROJECT_ROOT / "data"
+    if not (data_dir / "tickets.sqlite").exists():
+        TicketDataGenerator().generate()
     loader = TicketDataLoader(data_dir=PROJECT_ROOT / "data")
     ds = loader.load()
     return ds.joined(), ds.users, ds.comments
